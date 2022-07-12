@@ -2,47 +2,58 @@ package ruggero.concurrent;
 
 import ruggero.concurrent.domain.Bank;
 
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.stream.IntStream;
 
 public class TransferTask {
-    static Bank bank = new Bank(10);
+
+    private Bank bank = new Bank(10);
+
+    private void printCumulativeAmount(String amountAttribute) {
+        System.out.println(amountAttribute + " cumulative amount is " + bank.getCurrentCumulativeAmount());
+    }
 
 
-    public static void main(String[] args) throws Exception {
-        int totalInitialAmount = bank.getCurrentCumulativeAmount();
-        CyclicBarrier cb = new CyclicBarrier(4);
-        System.out.println("Total initial amount = " + totalInitialAmount );
-        performRandomTransfers(cb);
 
 
+    public void performTask(int n, CyclicBarrier c1,CyclicBarrier c2 ) {
+
+        try {
+            printCumulativeAmount("initial "  + n );
+            c1.await();
+            bank.performRandomTransfer(n);
+            c2.await();
+            printCumulativeAmount("final"  + n);
+
+        } catch(InterruptedException | BrokenBarrierException ex) {
+            System.out.println("Exception occurred!");
+
+        }
 
     }
 
-    public static void performRandomTransfers(CyclicBarrier cb) throws Exception {
 
-        ExecutorService service1 = null;
-        ExecutorService service2 = null;
+    public static void main(String[] args) {
+        ExecutorService service = null;
+        TransferTask transferTask = new TransferTask();
+        CyclicBarrier c1 = new CyclicBarrier(4 );
+        CyclicBarrier c2 = new CyclicBarrier(1,() -> System.out.println("Transfer Task is over") );
 
         try {
-            service1 = Executors.newFixedThreadPool(5);
-
-            for (int i = 0; i < 5; i++) {
-                service1.submit(bank::performRandomTransfer);
+            service = Executors.newFixedThreadPool(4);
+            for (int i = 0; i < 4; i++) {
+                int finalI = i;
+                service.submit(() -> transferTask.performTask(finalI,c1,c2));
 
             }
 
-
-            System.out.println("Total final amount = " + bank.getCurrentCumulativeAmount());
-
-
-       } finally {
-            service1.shutdown();
-            service2.shutdown();
+        } finally {
+            if (service != null) {
+                service.shutdown();
+            }
         }
-
     }
 
 }

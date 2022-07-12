@@ -32,7 +32,7 @@ public class BankAccountTest {
     @Test
     public void shouldPerformRandomTransfer() {
         Bank bank = new Bank(10);
-        bank.performRandomTransfer();
+        bank.performRandomTransfer(2);
         System.out.println(bank.getAccounts());
     }
 

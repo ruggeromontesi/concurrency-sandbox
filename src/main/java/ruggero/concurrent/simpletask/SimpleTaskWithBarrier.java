@@ -37,7 +37,7 @@ public class SimpleTaskWithBarrier {
     public static void main(String[] args)  {
         ExecutorService service = null;
 
-        SimpleTaskWithBarrier simpleTaskWithoutBarrier = new SimpleTaskWithBarrier();
+        SimpleTaskWithBarrier simpleTaskWithBarrier = new SimpleTaskWithBarrier();
         CyclicBarrier c1 = new CyclicBarrier(4);
         CyclicBarrier c2 = new CyclicBarrier(4, () -> System.out.println("Main Task is over"));
 
@@ -45,7 +45,7 @@ public class SimpleTaskWithBarrier {
             service = Executors.newFixedThreadPool(4);
             for(int i = 0; i< 4; i++) {
                 int finalI = i;
-                service.submit(() -> simpleTaskWithoutBarrier.performAllSteps(finalI,c1,c2));
+                service.submit(() -> simpleTaskWithBarrier.performAllSteps(finalI,c1,c2));
             }
 
         } finally {

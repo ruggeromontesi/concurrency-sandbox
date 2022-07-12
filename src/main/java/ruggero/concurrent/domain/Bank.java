@@ -48,7 +48,7 @@ public class Bank {
         return twoDistinctUuids;
     }
 
-    public void performRandomTransfer() {
+    public void performRandomTransfer(int n) {
         List<UUID> uuids = getTwoDistinctUuids();
         UUID uuidFrom = uuids.get(0);
         UUID uuidTo = uuids.get(1);
@@ -59,7 +59,7 @@ public class Bank {
 
         int amountToBeTransferred = random.nextInt(INITIAL_AMOUNT);
 
-        System.out.println("performing transaction from account "  + uuidFrom + " to bank account " + uuidTo
+        System.out.println("iteration " + n + "performing transaction from account "  + uuidFrom + " to bank account " + uuidTo
                 + "of an amount of " +  amountToBeTransferred);
 
         accounts.put(uuidFrom, accounts.get(uuidFrom) - amountToBeTransferred);
