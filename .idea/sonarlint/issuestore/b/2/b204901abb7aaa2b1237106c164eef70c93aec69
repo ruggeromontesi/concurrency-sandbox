@@ -1,0 +1,17 @@
+
+a	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(“²ŠP8¹â˜¯Ÿ0
+a	java:S112a"FDefine and throw a dedicated exception instead of using a generic one.(“²ŠP8¹â˜¯Ÿ0
+b	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(Ùòßà8¹â˜¯Ÿ0
+…	java:S116"dRename this field "CUMULATIVE_INITIAL_AMOUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×÷ºòøÿÿÿÿ8Äâ˜¯Ÿ0
+X	java:S125"<This block of commented-out lines of code should be removed.(õ®‰„8Äâ˜¯Ÿ0
+[
+java:S11175"9Rename "uuids" which hides the field declared at line 18.(‡ŸˆÕþÿÿÿÿ8Öâ˜¯Ÿ0
+Z	java:S106?"9Replace this use of System.out or System.err by a logger.(Äƒ™úÿÿÿÿ8Öâ˜¯Ÿ0
+[
+java:S1117M"9Rename "uuids" which hides the field declared at line 18.(‡ŸˆÕþÿÿÿÿ8Öâ˜¯Ÿ0
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(œžÞ†úÿÿÿÿ8Öâ˜¯Ÿ0
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8Öâ˜¯Ÿ0
+X
+java:S1068
+";Remove this unused "AMOUNT_OF_BANK_ACCOUNTS" private field.(í¥ˆ…8Öâ˜¯Ÿ0

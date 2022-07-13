@@ -1,0 +1,18 @@
+
+
+java:S3008
+"]Rename this field "TRANSACTION_NUMBER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Åò‹üÿÿÿÿ8ãá˜¯Ÿ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Û ‡ûÿÿÿÿ8ğá˜¯Ÿ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¦õ¥ıÿÿÿÿ8ğá˜¯Ÿ0
+{
+java:S2142)"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ÙÅî‚8†â˜¯Ÿ0
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(îã´èÿÿÿÿÿ8ˆâ˜¯Ÿ0
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(é–¬8‰â˜¯Ÿ0
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(÷·Ş°ùÿÿÿÿ8‰â˜¯Ÿ0
+E	java:S108)")Either remove or fill this block of code.(ÙÅî‚8â˜¯Ÿ0
+§
+java:S11300"„Remove the declaration of thrown exception 'java.util.concurrent.BrokenBarrierException', as it cannot be thrown from method's body.(Š¹Ÿøıÿÿÿÿ8â˜¯Ÿ0
+™
+java:S11300"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Š¹Ÿøıÿÿÿÿ8â˜¯Ÿ0
+F
+java:S1144")Remove this unused private "task" method.(ô–’š8¤â˜¯Ÿ0

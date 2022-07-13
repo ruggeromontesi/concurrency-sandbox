@@ -1,6 +1,7 @@
-package ruggero.concurrent.domain;
+package ruggero.concurrent.newsolution;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -12,7 +13,7 @@ public class Bank {
 
     private final int CUMULATIVE_INITIAL_AMOUNT ;
 
-    private Map<UUID,Integer> accounts = new HashMap<>();
+    private Map<UUID,Integer> accounts = new ConcurrentHashMap<>(); // new HashMap<>();
 
     private List<UUID> uuids;
 
@@ -69,6 +70,30 @@ public class Bank {
         int sumAfterTransatction = accounts.get(uuidFrom) + accounts.get(uuidTo);
 
         if(sumAfterTransatction != sumBeforeTransaction) {
+            throw new RuntimeException("Error in Transaction");
+        }
+    }
+    public void performRandomTransfer() {
+        List<UUID> uuids = getTwoDistinctUuids();
+        UUID uuidFrom = uuids.get(0);
+        UUID uuidTo = uuids.get(1);
+
+
+
+        int sumBeforeTransaction  = accounts.get(uuidFrom) + accounts.get(uuidTo);
+
+        int amountToBeTransferred = random.nextInt(INITIAL_AMOUNT);
+
+        System.out.println( "performing transaction from account "  + uuidFrom + " to bank account " + uuidTo
+                + "of an amount of " +  amountToBeTransferred);
+
+        accounts.put(uuidFrom, accounts.get(uuidFrom) - amountToBeTransferred);
+
+        accounts.put(uuidTo, accounts.get(uuidTo) + amountToBeTransferred);
+
+        int sumAfterTransaction = accounts.get(uuidFrom) + accounts.get(uuidTo);
+
+        if(sumAfterTransaction != sumBeforeTransaction) {
             throw new RuntimeException("Error in Transaction");
         }
     }

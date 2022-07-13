@@ -1,0 +1,14 @@
+
+b
+java:S2259:"EA "NullPointerException" could be thrown; "service" is nullable here.(òá‹8öâ˜¯Ÿ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(èÚ¤Õüÿÿÿÿ8öâ˜¯Ÿ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Û ‡ûÿÿÿÿ8öâ˜¯Ÿ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(êÚşïıÿÿÿÿ8öâ˜¯Ÿ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(³ÄÅ8öâ˜¯Ÿ0
+X	java:S125"<This block of commented-out lines of code should be removed.(ˆÕÈ²8öâ˜¯Ÿ0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Çœè‡8öâ˜¯Ÿ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¦õ¥ıÿÿÿÿ8öâ˜¯Ÿ0
+{
+java:S2142'"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ÙÅî‚8öâ˜¯Ÿ0
+E	java:S108'")Either remove or fill this block of code.(ÙÅî‚8öâ˜¯Ÿ0
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(‹¹™ˆúÿÿÿÿ8öâ˜¯Ÿ0

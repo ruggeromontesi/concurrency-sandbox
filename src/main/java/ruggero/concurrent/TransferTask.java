@@ -1,6 +1,6 @@
 package ruggero.concurrent;
 
-import ruggero.concurrent.domain.Bank;
+import ruggero.concurrent.newsolution.Bank;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

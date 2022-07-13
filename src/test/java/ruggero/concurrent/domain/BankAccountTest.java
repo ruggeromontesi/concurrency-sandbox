@@ -2,8 +2,8 @@ package ruggero.concurrent.domain;
 
 import org.junit.Assert;
 import org.junit.Test;
+import ruggero.concurrent.newsolution.Bank;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;

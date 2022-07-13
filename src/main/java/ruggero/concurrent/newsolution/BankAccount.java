@@ -1,4 +1,4 @@
-package ruggero.concurrent.domain;
+package ruggero.concurrent.newsolution;
 
 import java.util.UUID;
 
